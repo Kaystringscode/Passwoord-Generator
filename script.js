@@ -121,3 +121,52 @@ var specialCharacters = [
   if (specialCharacterschoice === false && lowerCasechoice === false && upperCasechoice === false && numberChoice === false){
     alert("You Must Choose Aleast One Character", "Lets Do This Again Rrefrsh Page")
   };  
+
+  // // Function to prompt user for password options              
+// function getPasswordOptions() {  
+//  }      
+
+
+
+
+
+
+// Function for getting a random element from an array
+function getRandom(arr) {
+    let allArrays = []; //included allArrays locally (instead of globally) so we don't have to reload the page to generate another password
+    i = 0; i < 1; {
+  //randomizes arrays
+                       specialCharacters.sort(() => Math.random() - 0.5);
+                       randomNumbers = numericCharacters.sort(() => Math.random() - 0.5);
+                       lowerCasedCharacters.sort(() => Math.random() - 0.5);
+                       upperCasedCharacters.sort(() => Math.random() - 0.5);
+  
+  // checking user's input if true will utilise the above math.random arrays + brings all arrays together in one array if true
+  if (lowerCasechoice === true) {
+    allArrays = allArrays.concat(lowerCasedCharacters);
+  }
+  
+  if (upperCasechoice === true) {
+    allArrays = allArrays.concat(upperCasedCharacters);
+  }
+  
+  if (numberChoice === true) {
+    allArrays = allArrays.concat(randomNumbers);
+  }
+  
+  if (specialCharacterschoice === true) {
+    allArrays = allArrays.concat(specialCharacters);
+  }
+  
+  // randomizes the array
+      randomArray = allArrays.sort(() => Math.random() - 0.5);
+  
+  //sets array length based on passwordLength input
+  
+      randomPassword = randomArray.slice(0,desiredpasswordlenght) 
+  
+  i++
+    }
+    return randomPassword
+  
+  }
